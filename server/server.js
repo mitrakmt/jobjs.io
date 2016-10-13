@@ -1,7 +1,6 @@
 const express = require('express');
 const app = express();
 const rootRouter = require('./router/index');
-const Model = require('./controller/index')
 const logger = require('morgan');
 const cors = require('cors');
 const bodyParser = require('body-parser')

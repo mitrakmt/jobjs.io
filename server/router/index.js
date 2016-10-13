@@ -1,6 +1,6 @@
 const Router = require('express').Router();
-const Controller = require('../controller');
-const Middleware = require('../controller/middleware');
+const Controller = require('../controllers');
+const Middleware = require('../controllers/middleware');
 const co = require('co');
 
 Router.route('/jobs')
