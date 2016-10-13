@@ -4,9 +4,26 @@
   "description": "",
   "main": "server/server.js",
   "scripts": {
-    "start": "node server/server.js",
+    "start": "nodemon server/server.js",
+    "lint": "eslint",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "cors": "^2.8.1",
+    "eslint": "^3.7.1",
+    "express": "^4.14.0",
+    "lodash": "^4.16.4",
+    "logger": "0.0.1",
+    "morgan": "^1.7.0",
+    "request": "^2.75.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.7.1",
+    "eslint-config-airbnb-base": "^8.0.0",
+    "eslint-config-google": "^0.6.0",
+    "eslint-plugin-import": "^1.16.0"
+  }
 }
