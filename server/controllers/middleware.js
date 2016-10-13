@@ -3,40 +3,28 @@ const Middleware = express.Router()
 const request = require("request");
 const _ = require('lodash');
 
-Middleware.getAllJobs = (req, res, next) => {
+Middleware.hashPassword = (req, res, next) => {
 
-  var options = {
-    method: 'GET',
-    url: 'https://jobs.github.com/positions.json',
-    qs: {
-      description: 'javascript'
-    },
-    headers: {
-       'cache-control': 'no-cache',
-       'content-type': 'application/json'
-    },
-    json: true
-  };
-
-  request(options, function (error, res, body) {
-    if (error) throw new Error(error);
-
-    req.body.jobs = body;
-    next();
-  });
 }
 
-Middleware.getJob = (req, res, next) => {
-  let options = {
-    // this needs filled out
-  };
+Middleware.checkEmailUniqueness = (req, res, next) => {
 
-  request(options, function (error, res, body) {
-    if (error) throw new Error(error);
+}
 
-    req.body.job = body;
-    next();
-  });
+Middleware.checkAuth = (req, res, next) => {
+
+}
+
+Middleware.checkPassword = (req, res, next) => {
+
+}
+
+Middleware.createToken = (req, res, next) => {
+
+}
+
+Middleware.destroyToken = (req, res, next) => {
+
 }
 
 module.exports = Middleware;
