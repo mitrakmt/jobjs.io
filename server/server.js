@@ -6,15 +6,16 @@ const mongodb = require('mongodb');
 const db = require('./db');
 const logger = require('morgan');
 const cors = require('cors');
-const bodyParser = require('body-parser')
+const bodyParser = require('body-parser');
+const path = require('path')
 
 const PORT = process.env.PORT || 2828;
 
 app.use(bodyParser.json());
 app.use(cors());
 app.use(logger('dev'));
-
-app.use('/', express.static(__dirname + '/client'));
+console.log(path.join(__dirname, '../client'));
+app.use('/', express.static(path.join(__dirname, '../client')));
 
 app.use('/api', rootRouter);
 
