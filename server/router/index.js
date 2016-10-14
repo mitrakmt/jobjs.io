@@ -7,7 +7,7 @@ const co = require('co');
 
 Router.route('/jobs/github')
   .get(Helpers.getGithubJobs, (req, res) => {
-    res.status(200).send(req.body.jobs);
+    res.status(200).type('text/html').send(req.body.jobs);
   })
 
 Router.route('/jobs/github/:query')

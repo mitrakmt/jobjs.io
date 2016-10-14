@@ -1,4 +1,15 @@
-<div class="auth-forms title">
+<div class="auth-forms title" layout-margin layout-padding>
   <h2 class="md-display-1">Home</h2>
-
+  <md-button class="md-button md-raised" ng-click="getGithubJobs()">Github</md-button>
+  <md-button class="md-button md-raised" ng-click="getDiceJobs()">Dice</md-button>
+  <md-button class="md-button md-raised" ng-click="getRemoteokJobs()">Remote OK</md-button>
+  <div class="jobs" ng-repeat="job in jobs">
+    <md-card layout-padding layout-margin>
+      <p class="md-subhead"><strong>Company: </strong> {{ job.company }}</p>
+      <p class="md-subhead"><strong>Title: </strong> {{ job.title }}</p>
+      <p class="md-subhead"><strong>Location: </strong> {{ job.location }}</p>
+      <div ng-bind-html="job.description"></div>
+      <p class="md-subhead"><strong>Url: </strong><a href="{{ job.url }}">{{ job.url }}</a></p>
+    </md-card>
+  </div>
 </div>
