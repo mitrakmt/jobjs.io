@@ -9,6 +9,23 @@
   </head>
   <body ng-app="jobjs">
 
+    <div class="navbar" layout-padding>
+      <md-button class="md-button md-raised" ng-href="#github">Github</md-button>
+      <md-button class="md-button md-raised" ng-href="#dice">Dice</md-button>
+      <md-button class="md-button md-raised" ng-href="#remoteok">Remote OK</md-button>
+    </div>
+
+    <div ng-if="!scopeLoaded">
+
+      <div id="spinner1" class="loading circle"></div>
+      <div id="spinner2" class="loading"></div>
+      <div id="spinner3" class="loading"></div>
+      <div id="spinner4" class="loading"></div>
+      <div id="spinner5" class="loading"></div>
+      <div id="spinner6" class="loading"></div>
+      <div id="spinner7" class="loading"></div>
+    </div>
+
     <ng-view></ng-view>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>

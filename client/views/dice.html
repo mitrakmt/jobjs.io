@@ -1,0 +1,18 @@
+<div class="" ng-init="diceInit()">
+  <div class="auth-forms title" layout-padding>
+    <div class="jobs" ng-repeat="job in jobs.resultItemList">
+      <md-card layout-padding layout-margin>
+        <div>
+          <div layout="row" layout-xs="column">
+            <p class="md-subhead company_title" flex><strong>Company: {{ job.company }}</p>
+            <p class="md-subhead" flex><strong>Title: </strong> {{ job.jobTitle }}</p>
+          </div>
+          <div layout="row" layout-xs="column">
+            <p class="md-subhead company_location" flex><strong>Location: </strong> {{ job.location }}</p>
+            <p class="md-subhead" flex><strong>Direct Link: </strong><a href="{{ job.detailUrl }}">Visit Website</a></p>
+          </div>
+        </div>
+      </md-card>
+    </div>
+  </div>
+</div>

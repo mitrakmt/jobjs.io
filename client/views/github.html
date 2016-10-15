@@ -1,0 +1,19 @@
+<div class="" ng-init="githubInit()">
+  <div class="auth-forms title" layout-margin layout-padding>
+    <div class="jobs" ng-repeat="job in jobs">
+      <md-card layout-padding layout-margin>
+        <div>
+          <div layout="row" layout-xs="column">
+            <p class="md-subhead company_title" flex><strong>Company: <a href="{{ job.company_url }}">{{ job.company }}</a><img src="{{job.company_logo}}" class="company_logo" /></p>
+              <p class="md-subhead" flex><strong>Title: </strong> {{ job.title }}</p>
+            </div>
+            <div layout="row" layout-xs="column">
+              <p class="md-subhead company_location" flex><strong>Location: </strong> {{ job.location }}</p>
+              <p class="md-subhead" flex><strong>Direct Link: </strong><a href="{{ job.url }}">Visit Website</a></p>
+            </div>
+          </div>
+          <p class="md-title"><strong>Description: </strong><p class="md-subhead" ng-bind-html="job.description"></p></p>
+        </md-card>
+      </div>
+    </div>
+</div>
