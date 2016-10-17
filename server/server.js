@@ -14,7 +14,7 @@ const PORT = process.env.PORT || 2828;
 app.use(bodyParser.json());
 app.use(cors());
 app.use(logger('dev'));
-console.log(path.join(__dirname, '../client'));
+
 app.use('/', express.static(path.join(__dirname, '../client')));
 
 app.use('/api', rootRouter);
